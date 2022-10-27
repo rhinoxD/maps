@@ -136889,6 +136889,9 @@ var User = /** @class */function () {
       lng: parseFloat(faker_1.default.address.longitude())
     };
   }
+  User.prototype.markerContent = function () {
+    return "User Name: ".concat(this.name);
+  };
   return User;
 }();
 exports.User = User;
@@ -136914,6 +136917,9 @@ var Company = /** @class */function () {
       lng: parseFloat(faker_1.default.address.longitude())
     };
   }
+  Company.prototype.markerContent = function () {
+    return "\n    <div>\n      <h1>Company Name: ".concat(this.companyName, "</h1>\n      <h3>Catchphrase: ").concat(this.catchPhrase, "</h3>\n    </div>\n    ");
+  };
   return Company;
 }();
 exports.Company = Company;
@@ -136945,7 +136951,7 @@ var CustomMap = /** @class */function () {
     });
     marker.addListener('click', function () {
       var infoWindow = new google.maps.InfoWindow({
-        content: 'Hey!'
+        content: mappable.markerContent()
       });
       infoWindow.open(_this.googleMap, marker);
     });
