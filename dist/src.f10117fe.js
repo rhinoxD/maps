@@ -136929,6 +136929,7 @@ var user = new User_1.User();
 console.log(user);
 var company = new Company_1.Company();
 console.log(company);
+google;
 },{"./User":"src/User.ts","./Company":"src/Company.ts"}],"C:/Users/Shivam/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
