@@ -1,3 +1,4 @@
+/// <reference types="@types/google.maps" />
 // Instructions to every other class
 // on how they can be an argument to 'addMarker'
 export interface Mappable {
@@ -14,7 +15,7 @@ export class CustomMap {
 
   constructor(divId: string) {
     this.googleMap = new google.maps.Map(
-      document.getElementById(divId),
+      document.getElementById(divId) as HTMLDivElement,
       {
         zoom: 1,
         center: {

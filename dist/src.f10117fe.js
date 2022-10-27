@@ -136932,6 +136932,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.CustomMap = void 0;
+/// <reference types="@types/google.maps" />
 var CustomMap = /** @class */function () {
   function CustomMap(divId) {
     this.googleMap = new google.maps.Map(document.getElementById(divId), {
